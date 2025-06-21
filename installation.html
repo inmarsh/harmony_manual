@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>installation</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">installation</h1>
+</header>
+<h1 id="インストールマニュアル">インストールマニュアル</h1>
+<p>この章では、PC (ブラウザ) で Google Gemini
+を利用し、合唱サークル向けコーチ Gem
+「ハーモニー」を有効化するまでの流れを説明します。</p>
+<hr />
+<h2 id="事前準備">1. 事前準備</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>必要なもの</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google アカウント</td>
+<td>Gmail 等を利用している場合は既存アカウントで OK</td>
+</tr>
+<tr>
+<td>安定したインターネット接続</td>
+<td>動画／音声を参照する場合があるため Wi-Fi 推奨</td>
+</tr>
+<tr>
+<td>推奨ブラウザ</td>
+<td>Google Chrome, Microsoft Edge, Safari (最新バージョン)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gemini-へアクセス">2. Gemini へアクセス</h2>
+<ol type="1">
+<li>ブラウザで <a
+href="https://gemini.google.com/">https://gemini.google.com/</a>
+にアクセスします。</li>
+<li>画面右上の <strong>[Sign in]</strong> をクリックし、Google
+アカウントでログインします。</li>
+<li>利用規約とプライバシーに同意すると、Gemini
+のホーム画面に遷移します。</li>
+</ol>
+<hr />
+<h2 id="ハーモニー-gem-を登録">3. ハーモニー Gem を登録</h2>
+<p>ここでは、管理者から受け取ったプロンプトとナレッジファイルを使って、ご自身の
+Gemini
+に「ハーモニー」を手動で設定する方法を説明します。少し手順が多いですが、一つずつ丁寧に行いましょう。</p>
+<h3 id="準備するもの">3.1. 準備するもの</h3>
+<p>まず、管理者から以下のファイル一式が共有されていることを確認してください。</p>
+<ul>
+<li><code>main_prompt.md</code>:
+AIコーチの基本的な指示が書かれたファイル</li>
+<li><code>attachments</code> フォルダ:
+<ul>
+<li><code>0_core_prompt.md</code></li>
+<li><code>1a_persona_music_preset.md</code></li>
+<li><code>2_ethics_charter.md</code></li>
+<li><code>3_specialist_ai.md</code></li>
+<li><code>4_core_mechanics.md</code></li>
+<li>(その他、追加ファイルがある場合もあります)</li>
+</ul></li>
+</ul>
+<h3 id="新しい-gem-の作成">3.2. 新しい Gem の作成</h3>
+<ol type="1">
+<li>Gemini 画面の左側にあるメニューから <strong>「Gemを表示」</strong>
+をクリックします。</li>
+<li>Gemマネージャーの右側にある<strong>Gemを作成</strong>
+をクリックします。 <img src="./images/gemini_gem_create.png"
+alt="Gemini Gem作成画面" /></li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>:
+スクリーンショットは実際の画面と若干異なる可能性があります。最新のGeminiインターフェースに合わせて適宜読み替えてください。</p>
+</blockquote>
+<p><em>図: Gemini の Gem 作成画面</em></p>
+<h3 id="プロンプトとナレッジの設定">3.3. プロンプトとナレッジの設定</h3>
+<p>Gem の設定画面が開いたら、以下の手順で設定します。</p>
+<p><strong>① カスタム指示の設定</strong></p>
+<ol type="1">
+<li>準備したファイルの中から <code>main_prompt.md</code>
+をメモ帳などのテキストエディタで開きます。</li>
+<li>書かれている内容をすべて選択してコピーします (Windowsなら Ctrl+A →
+Ctrl+C, Macなら Cmd+A → Cmd+C)。</li>
+<li>Gemini の設定画面に戻り、<strong>カスタム指示</strong>
+という大きな入力欄に、コピーした内容を貼り付けます (Windowsなら Ctrl+V,
+Macなら Cmd+V)。</li>
+</ol>
+<p><strong>② 知識の追加</strong></p>
+<ol type="1">
+<li>「カスタム指示」欄の下にある <strong>知識</strong>
+のセクションを探します。</li>
+<li><strong>「＋」（ファイルを追加）</strong> をクリックします。</li>
+<li>ファイル選択画面が開いたら、準備した <code>attachments</code>
+フォルダを開きます。</li>
+<li>フォルダ内の <strong>すべてのファイル</strong>
+(<code>0_core_prompt.md</code>, <code>1a_persona_music_preset.md</code>
+等) を選択し、アップロードします。</li>
+</ol>
+<h3 id="保存と名前の決定">3.4. 保存と名前の決定</h3>
+<ol type="1">
+<li>画面上部にある「Gemに名前をつけてください」欄をクリックし、名前を
+<code>おんがく何でも相談箱</code> に変更します。</li>
+<li>画面右上の <strong>「保存」</strong> または
+<strong>「更新」</strong> ボタンをクリックして設定を保存します。</li>
+</ol>
+<figure>
+<img src="./images/gemini_gem_setup.png" alt="Gemini Gem作成画面" />
+<figcaption aria-hidden="true">Gemini Gem作成画面</figcaption>
+</figure>
+<blockquote>
+<p><strong>注意</strong>:
+スクリーンショットは実際の画面と若干異なる可能性があります。最新のGeminiインターフェースに合わせて適宜読み替えてください。</p>
+</blockquote>
+<p><em>図: Gemini の Gem 作成画面</em></p>
+<h3 id="重要登録内容の最終確認">3.5. 【重要】登録内容の最終確認</h3>
+<p>Gem
+を保存した後、ファイルが正しく登録されているか必ず確認しましょう。（ファイルが登録されない不具合が報告されています）</p>
+<ol type="1">
+<li>左上の「＜」を押して、一度 Gemマネージャー画面に戻ります。</li>
+<li>作成した <code>おんがく何でも相談箱</code>
+の右側にある鉛筆メニュー「✏️」を選択します。</li>
+<li>再度設定画面が開くので、<strong>知識</strong>
+の欄に、先ほどアップロードしたファイルがすべて表示されているかを確認します。</li>
+<li>もしファイルが不足している場合は、お手数ですが再度
+<strong>「＋」</strong>
+から追加し、もう一度保存してください。（登録したはずなのに、たまに消えてしまうことがあります）。再登録した場合は、もう一度このセクションの最初から確認をやり直してください。</li>
+</ol>
+<hr />
+<h2 id="テスト起動">4. テスト起動</h2>
+<ol type="1">
+<li><strong>Gemマネージャ</strong> 内の
+<code>おんがく何でも相談箱</code> をクリック。</li>
+<li>チャット画面が開くので、以下のテストメッセージを送信します。</li>
+</ol>
+<pre class="text"><code>はじめまして！自己紹介をお願いします。</code></pre>
+<ol start="3" type="1">
+<li>ハーモニーから歓迎メッセージが返ってくればセットアップ成功です。</li>
+</ol>
+<hr />
+<h2 id="よくあるインストール時のつまずき">5.
+よくあるインストール時のつまずき</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>症状</th>
+<th>対処</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gem が追加されない</td>
+<td>ブラウザを更新し再度追加作業を実施。拡張機能が干渉していないか確認。</td>
+</tr>
+<tr>
+<td>ログイン後に真っ白な画面</td>
+<td>ブラウザキャッシュのクリア、シークレットウィンドウで再試行。</td>
+</tr>
+<tr>
+<td>英語 UI で表示される</td>
+<td>Gemini 設定で言語を日本語に変更。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>上記で解決しない場合は <a href="./faq.md">FAQ</a>
+も参照してください。</p>
+</blockquote>
+<hr />
+<p>これで PC でのハーモニーの導入は完了です。次章では iPhone
+でのセットアップ方法を解説します。</p>
+</body>
+</html>
