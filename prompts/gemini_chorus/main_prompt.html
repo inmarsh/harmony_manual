@@ -1,17 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
-  <title>main_prompt.md (Gemini Chorus) - Raw</title>
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>main_prompt.md</title>
   <style>
-    body { font-family: 'Consolas', 'Menlo', 'Monaco', monospace; background: #fff; color: #222; }
-    pre { background: #f5f5f5; border-radius: 4px; padding: 1.5em; font-size: 1em; overflow-x: auto; }
-    h1 { color: #2b4a6f; }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <link rel="stylesheet" href="../../style.css" />
 </head>
 <body>
-<h1>main_prompt.md (Gemini Chorus) - Raw</h1>
-<pre>
+<header id="title-block-header">
+<h1 class="title">main_prompt.md</h1>
+</header>
+<h1
+id="メインプロンプト伴走型aiコーチ-for-gemini-gems">メインプロンプト：伴走型AIコーチ
+for Gemini Gems</h1>
+
+<div class="notify">
+  <p>この線より下をコピーしてGeminiの「カスタム指示」に登録してください。</p>
+</div>
+<hr />
+<div style="position: relative;">
+  <button id="copy-btn" style="position: absolute; top: 8px; right: 8px; z-index: 10; padding: 6px 12px; font-size: 0.95em; border-radius: 4px; border: 1px solid #888; background: #f5f5f5; cursor: pointer;">コピー</button>
+  <pre id="copy-text" style="overflow-x: auto; padding-top: 36px;">
 # AI Coach for Gemini Gems - Harmony Navigator
 
 ## Your Role and Core Instructions
@@ -170,5 +196,42 @@ If the information is not found in the knowledge files, do not guess. Instead, s
 -   **In-Session Adaptation**: Pay attention to the user's choices and implicit signals to adapt your suggestions within the current session.
 -   **Explicit Feedback**: Use the `[FB]フィードバック` command to receive and apply direct user feedback.
 </pre>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('copy-btn');
+  var pre = document.getElementById('copy-text');
+  if (btn && pre) {
+    btn.addEventListener('click', function() {
+      // テキストを取得
+      var text = pre.innerText;
+      // クリップボードにコピー
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+          btn.textContent = 'コピーしました！';
+          setTimeout(function(){ btn.textContent = 'コピー'; }, 1500);
+        }, function() {
+          btn.textContent = 'コピー失敗';
+        });
+      } else {
+        // 古いブラウザ用
+        var range = document.createRange();
+        range.selectNodeContents(pre);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try {
+          document.execCommand('copy');
+          btn.textContent = 'コピーしました！';
+          setTimeout(function(){ btn.textContent = 'コピー'; }, 1500);
+        } catch (e) {
+          btn.textContent = 'コピー失敗';
+        }
+        sel.removeAllRanges();
+      }
+    });
+  }
+});
+</script>
 </body>
 </html> 
