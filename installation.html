@@ -78,12 +78,12 @@
 </nav>
 
 <header id="title-block-header">
-<h1 class="title">合唱サークル学習コーチ マニュアル - インストール</h1>
+<h1 class="title">おんがく何でも相談箱 マニュアル - インストール</h1>
 </header>
 <h1 id="インストールマニュアル">インストールマニュアル</h1>
 <p>この章では、PC (ブラウザ) で Google Gemini
 を利用し、合唱サークル向けコーチ Gem
-「ハーモニー」を有効化するまでの流れを説明します。</p>
+「おんがく何でも相談箱」を有効化するまでの流れを説明します。</p>
 <hr />
 <h2 id="事前準備">1. 事前準備</h2>
 <table>
@@ -124,20 +124,18 @@ href="https://gemini.google.com/">https://gemini.google.com/</a>
 のホーム画面に遷移します。</li>
 </ol>
 <hr />
-<h2 id="ハーモニー-gem-を登録">3. ハーモニー Gem を登録</h2>
+<h2 id="ハーモニー-gem-を登録">3. おんがく何でも相談箱 Gem を登録</h2>
 <p>ここでは、管理者から受け取ったプロンプトとナレッジファイルを使って、ご自身の
 Gemini
-に「ハーモニー」を手動で設定する方法を説明します。少し手順が多いですが、一つずつ丁寧に行いましょう。</p>
+に「おんがく何でも相談箱」を手動で設定する方法を説明します。少し手順が多いですが、一つずつ丁寧に行いましょう。</p>
 <h3 id="準備するもの">3.1. 準備するもの</h3>
 <p>まず、管理者から以下のファイル一式が共有されていることを確認してください。</p>
 <ul>
-  <li><a href="prompts/gemini/main_prompt.html">メインプロンプト</a></li>
-  <li>以下の5つのナレッジファイルを、Geminiの「知識」セクションにアップロードします。各ファイルは、合唱サークル向けAIアシスタントの設定に不可欠な重要な情報が含まれています。</li>
-  <li><a href="prompts/gemini/attachments/0_core_prompt.md" download>コアプロンプト</a></li>
-  <li><a href="prompts/gemini/attachments/1a_persona_music_preset.md" download>ペルソナプリセット</a></li>
-  <li><a href="prompts/gemini/attachments/2_ethics_charter.md" download>倫理憲章</a></li>
-  <li><a href="prompts/gemini/attachments/3_specialist_ai.md" download>専門家AI設定</a></li>
-  <li><a href="prompts/gemini/attachments/4_core_mechanics.md" download>コアメカニクス</a></li>
+  <li><a href="prompts/gemini_chorus2/main_prompt.html">メインプロンプト</a></li>
+  <li>以下の3つのナレッジファイルを、Geminiの「知識」セクションにアップロードします。各ファイルは、合唱サークル向けAIアシスタントの設定に不可欠な重要な情報が含まれています。</li>
+  <li><a href="prompts/gemini_chorus2/attachments/features_knowledge.txt" download>機能の説明</a></li>
+  <li><a href="prompts/gemini_chorus2/attachments/personas_knowledge.txt" download>ペルソナと専門の先生の設定</a></li>
+  <li><a href="prompts/gemini_chorus2/attachments/templates_knowledge.txt" download>対話テンプレート</a></li>
 </ul>
 <h3 id="新しい-gem-の作成">3.2. 新しい Gem の作成</h3>
 <ol type="1">
@@ -156,7 +154,7 @@ alt="Gemini Gem作成画面" /></li>
 <p>Gem の設定画面が開いたら、以下の手順で設定します。</p>
 <p><strong>① カスタム指示の設定</strong></p>
 <ol type="1">
-<li><a href="prompts/gemini/main_prompt.html">メインプロンプト</a>を開きます。</li>
+<li><a href="prompts/gemini_chorus2/main_prompt.html">メインプロンプト</a>を開きます。</li>
 <li>書かれている内容をすべて選択してコピーします (Windowsなら Ctrl+A →
 Ctrl+C, Macなら Cmd+A → Cmd+C)。</li>
 <li>Gemini の設定画面に戻り、<strong>カスタム指示</strong>
@@ -168,7 +166,7 @@ Macなら Cmd+V)。</li>
 <li>「カスタム指示」欄の下にある <strong>知識</strong>
 のセクションを探します。</li>
 <li><strong>「＋」（ファイルを追加）</strong> をクリックします。</li>
-<li>ファイル選択画面が開いたら、先ほどダウンロードした5つのナレッジファイル（コアプロンプト、ペルソナプリセット、倫理憲章、専門家AI設定、コアメカニクス）を選択し、順番にアップロードします。</li>
+<li>ファイル選択画面が開いたら、先ほどダウンロードした3つのナレッジファイル（機能の説明、ペルソナと専門の先生の設定、対話テンプレート）を選択し、順番にアップロードします。</li>
 </ol>
 <h3 id="保存と名前の決定">3.4. 保存と名前の決定</h3>
 <ol type="1">
@@ -194,7 +192,7 @@ Macなら Cmd+V)。</li>
 <li>作成した <code>おんがく何でも相談箱</code>
 の右側にある鉛筆メニュー「✏️」を選択します。</li>
 <li>再度設定画面が開くので、<strong>知識</strong>
-の欄に、先ほどアップロードしたファイルがすべて表示されているかを確認します。</li>
+の欄に、先ほどアップロードした3つのファイル（機能の説明、ペルソナと専門の先生の設定、対話テンプレート）がすべて表示されているかを確認します。</li>
 <li>もしファイルが不足している場合は、お手数ですが再度
 <strong>「＋」</strong>
 から追加し、もう一度保存してください。（登録したはずなのに、たまに消えてしまうことがあります）。再登録した場合は、もう一度このセクションの最初から確認をやり直してください。</li>
@@ -244,7 +242,7 @@ Macなら Cmd+V)。</li>
 も参照してください。</p>
 </blockquote>
 <hr />
-<p>これで PC でのハーモニーの導入は完了です。次章では iPhone
+<p>これで PC でのおんがく何でも相談箱の導入は完了です。次章では iPhone
 でのセットアップ方法を解説します。</p>
 
 <nav class="page-nav">
