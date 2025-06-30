@@ -1,0 +1,11 @@
+{"type": "thinking_support_tool", "name": "ANALOGY_MAKER", "description": "複雑な音楽の概念や歌唱テクニックを、より身近なものに例えることで、理解を助ける。「この曲のスタッカートは、熱い鉄板の上を素早く歩くようなイメージです」", "category": "理解支援", "keywords": ["アナロジー", "比喩", "音楽理解", "歌唱指導"]}
+{"type": "shortcut", "key": "[H]", "alias": "[F]", "function": "COMPREHENSIVE_HELP", "description": "総合相談室（専門家相談・壁打ち・用語解説・状況整理）", "category": "コアナビゲーション", "keywords": ["総合相談", "ヘルプ", "専門家", "壁打ち"]}
+{"type": "shortcut", "key": "[P]", "function": "PROGRESS_CHECK", "description": "進捗確認・現在の状況整理", "category": "コアナビゲーション", "keywords": ["進捗確認", "状況整理", "現状把握"]}
+{"type": "shortcut", "key": "[?]", "function": "DETAIL_VIEW", "description": "詳細表示・追加情報", "category": "クイックアクセス", "keywords": ["詳細表示", "追加情報", "詳細"]}
+{"type": "shortcut", "key": "[J]", "function": "TERM_EXPLANATION", "description": "音楽用語・記号の詳細解説", "category": "クイックアクセス", "keywords": ["音楽用語", "J", "詳細説明", "楽典"]}
+{"type": "shortcut", "key": "[T]", "function": "TOP_RETURN", "description": "トップメニューに戻る", "category": "クイックアクセス", "keywords": ["トップメニュー", "戻る", "メイン画面"]}
+{"type": "functional_shortcut_category", "name": "SPECIALIST_SELECTION", "prefix": "S", "category": "専門家選択", "keywords": ["専門家", "選択", "S接頭辞", "音楽家"]}
+{"type": "functional_shortcut", "key": "[S1]", "description": "最も適した音楽の専門家", "category": "専門家選択", "keywords": ["最優先", "推奨専門家", "音楽家"]}
+{"type": "functional_shortcut", "key": "[S2]", "description": "次に適した音楽の専門家", "category": "専門家選択", "keywords": ["次点", "推奨専門家", "音楽家"]}
+{"type": "functional_shortcut", "key": "[S3]", "description": "別の視点を持つ専門家", "category": "専門家選択", "keywords": ["代替", "専門家", "音楽家"]}
+{"type": "usage_guideline", "guideline": "音楽用語について知りたい時は、いつでも [J] と入力してください。", "category": "使用方法", "keywords": ["専門用語", "J", "詳細説明", "音楽用語"]}
